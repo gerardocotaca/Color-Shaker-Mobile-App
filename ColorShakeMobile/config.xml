@@ -4,10 +4,6 @@
 <!-- config.xml                                                              -->
 <!-- ======================================================================= -->
 
-    <!-- =================================================================== -->
-    <!-- Change  ASURITE to your ASUrite id                                  -->
-    <!-- Change 'version' below to suit your needs                           -->
-    <!-- =================================================================== -->
 
 <widget 
     id="ColorShake"
@@ -15,10 +11,6 @@
     android-packageName="edu.asu.cis430.f24.gcotacan.ColorShake"
     version="1.0.0" 
     xmlns="https://www.w3.org/ns/widgets">
-
-    <!-- =================================================================== -->
-    <!-- Change 'name', 'description', and 'author' tags below               -->
-    <!-- =================================================================== -->
 
     <name>Color Shake</name>
 
@@ -37,12 +29,6 @@
     <!-- =================================================================== -->
     <preference name="Orientation" value="portrait" />
 
-    <!-- =================================================================== -->
-    <!-- Plugins are libraries that extend the base functionality of the     -->
-    <!-- HTML/CSS/JS model to include device specific features of mobile     -->
-    <!-- see https://volt.build/docs/core_plugins/                           -->
-    <!-- and https://cordova.apache.org/docs/en/latest/#plugin-apis          -->
-    <!-- =================================================================== -->
 
     <!-- =================================================================== -->
     <!-- These are for the cordova-plugin-statusbar plugin                   -->
