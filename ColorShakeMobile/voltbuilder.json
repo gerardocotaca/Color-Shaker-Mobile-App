@@ -1,0 +1,12 @@
+{
+  "release"                : "debug",
+  "verbose"                : "true",
+  "platform"               : "android",
+  "androidAlias"           : "key0",
+  "androidAliasPassword"   : "cis430isGr8!",
+  "androidKeystore"        : "certificates/android.p12",
+  "androidKeystorePassword": "cis430isGr8!",
+  "iosDevelopment"         : "certificates/cis430f24.1.mobileprovision",
+  "iosDevP12"              : "certificates/ios.p12",
+  "iosDevP12Password"      : "cis430isGr8!"
+}

@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!-- ======================================================================= -->
+<!-- config.xml                                                              -->
+<!-- ======================================================================= -->
+
+    <!-- =================================================================== -->
+    <!-- Change  ASURITE to your ASUrite id                                  -->
+    <!-- Change 'version' below to suit your needs                           -->
+    <!-- =================================================================== -->
+
+<widget 
+    id="ColorShake"
+    ios-CFBundleIdentifier="edu.asu.cis430.f24.gcotacan.ColorShake"
+    android-packageName="edu.asu.cis430.f24.gcotacan.ColorShake"
+    version="1.0.0" 
+    xmlns="https://www.w3.org/ns/widgets">
+
+    <!-- =================================================================== -->
+    <!-- Change 'name', 'description', and 'author' tags below               -->
+    <!-- =================================================================== -->
+
+    <name>Color Shake</name>
+
+    <description>
+        Demonstrates responding to Shake Events and using 3rd party plugins
+    </description>
+
+    <author email="gcotacan@asu.edu" href="http://www.asu.edu">
+        Gerardo Cota-Canez
+    </author>
+
+    <content src="index.html" />  <!-- the starting point of your hybrid app -->
+
+    <!-- =================================================================== -->
+    <!-- Orientation: values: landscape, portrait, or default (allow both)   -->
+    <!-- =================================================================== -->
+    <preference name="Orientation" value="portrait" />
+
+    <!-- =================================================================== -->
+    <!-- Plugins are libraries that extend the base functionality of the     -->
+    <!-- HTML/CSS/JS model to include device specific features of mobile     -->
+    <!-- see https://volt.build/docs/core_plugins/                           -->
+    <!-- and https://cordova.apache.org/docs/en/latest/#plugin-apis          -->
+    <!-- =================================================================== -->
+
+    <!-- =================================================================== -->
+    <!-- These are for the cordova-plugin-statusbar plugin                   -->
+    <!-- https://github.com/apache/cordova-plugin-statusbar                  -->
+    <!-- =================================================================== -->
+    <plugin name="cordova-plugin-statusbar" />
+    <plugin name="cordova-plugin-shake" />
+    <plugin name="cordova-plugin-cleartext" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#FFC627" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+
+    <!-- =================================================================== -->
+    <!-- These are for the splashscreen when the app starts up               -->
+    <!-- =================================================================== -->
+    <preference name="SplashScreenDelay" value="2000" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/splashTemplate.png" />
+    <preference name="AndroidWindowSplashScreenBackground" value="#000000" />
+
+    <!-- =================================================================== -->
+    <!-- cordova-plugin-cleartext - enables unencrypted text to be passed to -->
+    <!-- servers, it is not secure, but ok for developmental testing         -->
+    <!-- =================================================================== -->
+    <access origin="*" />
+    <access origin="http://*.googleapis.com" subdomains="true" />
+    <access origin="http://*.gstatic.com" subdomains="true" />
+
+    <!-- =================================================================== -->
+    <!-- allow-intents: if the user selects the url, allow the               -->
+    <!-- system (mobile os) to honor the users intent and open it            -->
+    <!-- =================================================================== -->
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+
+    <!-- =================================================================== -->
+    <!-- Platform specific configurations (e.g. ios, android, Electron )     -->
+    <!-- =================================================================== -->
+    <platform name="android">  
+        <!-- open google playstore if url starts with market:* -->
+        <allow-intent href="market:*" /> 
+    </platform>
+
+    <platform name="ios">
+        <!-- open App Store on iOS -->
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+
+        <!-- To use the location, camera, or photos, must ask permission -->
+        <edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="overwrite">
+            <string>Allow the app to access location services.</string>
+        </edit-config>
+    </platform>      
+
+</widget>

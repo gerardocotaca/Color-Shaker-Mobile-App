@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+	<!-- last 2 parameters keep the double tap on iOS from zooming display -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, 
+								   maximum-scale=1, user-scalable=no" />
+
+    <title>Color Shake</title>
+
+    <!-- This is not a secure content policy, should be locked down for prod -->
+	<meta http-equiv="Content-Security-Policy" 
+    content="default-src 'self' data: gap: 'unsafe-inline' 
+                https://ssl.gstatic.com ws:; 
+            style-src 'self' 'unsafe-inline'; 
+            script-src  'self' 'unsafe-inline' 'unsafe-eval' ;
+            media-src *" />	
+
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <h1>Color Shake</h1>
+    <button id="permissionButtonId" type="button">Get Permissions</button>
+    <p>&nbsp;</p>
+    <button id="colorButtonId" type="button">Change Color</button>
+    <p>&nbsp;</p>
+	<h2 id="shakeLabelId"></h2>
+	<h2 id="rgbLabelId">rgb(255,255,255)</h3>
+
+	<script src="./js/index.js"></script>
+	<script src="./js/shake-plugin.js"></script>
+	<script src="cordova.js"></script>
+
+	</body>
+</html>
